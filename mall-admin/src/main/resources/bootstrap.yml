@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: mall-admin
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.11.135:8848
+        namespace: 4589cf6e-af9d-4f42-99b5-c9ff69b45d67
+        group: dev
+        file-extension: yml
