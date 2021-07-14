@@ -1,9 +1,17 @@
 import Vue from 'vue'
-import './plugins/axios'
 import App from './App.vue'
-import router from './router'
-import store from './store'
 import './plugins/element.js'
+
+import 'normalize.css/normalize.css' // A modern alternative to CSS resets
+import '@/styles/index.scss' // global css
+
+import store from './store'
+import router from './router'
+
+import * as filters from './filters'
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 
 Vue.config.productionTip = false
 
